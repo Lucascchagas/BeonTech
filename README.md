@@ -77,14 +77,21 @@ For a finished project setup, clone the project and install all required depende
     git clone git@github.com:Lucascchagas/BeonTech.git
 
 Tests Explanation
+
 API Testing
+
 The API tests are designed to verify the CRUD (Create, Read, Update, Delete) operations on the PetStore API. Using Playwright, we perform HTTP requests and validate responses. Here's a breakdown of the tests:
 
 POST - 200: Creates a new pet and verifies the response status is 200. It checks if the pet's ID is 10 and validates the response schema.
+
 PUT - 200: Updates the pet's information and verifies the response status is 200. It checks if the pet's ID is 10 and validates the response schema.
+
 GET - 200: Retrieves the pet's information by ID and verifies the response status is 200. It checks if the pet's ID is 10 and validates the response schema.
+
 DELETE - 200: Deletes the pet by ID and verifies the response status is 200. It checks if the response body confirms the pet was deleted.
+
 UI Testing
+
 The UI tests are designed to verify the functionality and navigation of the Google search page. Using Playwright, we interact with the web page elements and validate their behaviors. Here's a breakdown of the tests:
 
 Access Facebook sign-up screen: Navigates to Google, performs a search for "Facebook", and validates that the correct description for Meta Platforms, Inc. is displayed.
