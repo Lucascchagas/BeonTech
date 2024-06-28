@@ -1,0 +1,46 @@
+{
+  "name": "interview",
+  "version": "0.0.1",
+  "description": "Interview with Lucas Chagas",
+  "author": "Lucas Chagas",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.4.5",
+    "joi": "^17.13.3",
+    "moment": "^2.30.1",
+    "playwright": "^1.45.0",
+    "ulid": "^2.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.9.4",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^43.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "lint": "eslint \"{tests,}/**/*.ts\" --fix",
+    "playwright:test": "playwright test"
+  },
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": []
+}

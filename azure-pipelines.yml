@@ -1,0 +1,39 @@
+trigger:
+  - main
+
+pool:
+  name: infra-shared
+
+variables:
+  RunDebugTests: false
+
+steps:
+  - script: |
+      echo "Checking GLIBC version..."
+      ldd --version
+    displayName: 'Check GLIBC version'
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '16.x'
+    displayName: 'Install Node.js'
+
+  - script: npm install
+    displayName: 'Install dependencies'
+
+  - script: npx tsc --skipLibCheck
+    displayName: 'Compile TypeScript'
+
+  - script: npx playwright install
+    displayName: 'Install Playwright'
+
+  - script: npx playwright test --headed
+    displayName: 'Run Playwright Tests'
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: 'test-results/results.xml'
+      testRunTitle: 'Playwright Test Results'
+      failTaskOnFailedTests: true
+      publishRunAttachments: true
+    condition: succeededOrFailed()
