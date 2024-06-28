@@ -12,7 +12,7 @@ export const petResponse = {
     status: Joi.string().required(),
     category: Joi.object({
       id: Joi.number().required(),
-      name: Joi.string().required()
-    }).unknown(true), 
-  }).unknown(true), 
+      name: Joi.string().required(),
+    }).unknown(true),
+  }).unknown(true),
 };

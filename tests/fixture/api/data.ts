@@ -2,47 +2,41 @@ import { ulid } from 'ulid';
 import moment from 'moment';
 
 function generateTitle() {
-    const ulidValue = ulid();
+  const ulidValue = ulid();
 
-    return `QA-${moment().format('YYYYMMDD')}-${ulidValue}`
+  return `QA-${moment().format('YYYYMMDD')}-${ulidValue}`;
 }
 
-export const petCreate =
-{
-    "id": 10,
-    "name": "testLucas",
-    "category": {
-        "id": 1,
-        "name": "Dogs"
+export const petCreate = {
+  id: 10,
+  name: 'testLucas',
+  category: {
+    id: 1,
+    name: 'Dogs',
+  },
+  photoUrls: ['string'],
+  tags: [
+    {
+      id: 0,
+      name: 'string',
     },
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-        {
-            "id": 0,
-            "name": "string"
-        }
-    ],
-    "status": "available"
-}
+  ],
+  status: 'available',
+};
 
-export const petUpdate =
-{
-    "id": 10,
-    "name": "doggie",
-    "category": {
-        "id": 1,
-        "name": "Dogs"
+export const petUpdate = {
+  id: 10,
+  name: 'doggie',
+  category: {
+    id: 1,
+    name: 'Dogs',
+  },
+  photoUrls: ['string'],
+  tags: [
+    {
+      id: 0,
+      name: 'string',
     },
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-        {
-            "id": 0,
-            "name": "string"
-        }
-    ],
-    "status": "available"
-}
+  ],
+  status: 'available',
+};

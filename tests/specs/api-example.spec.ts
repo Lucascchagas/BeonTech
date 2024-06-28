@@ -5,7 +5,6 @@ import { petResponse } from 'tests/fixture/api/response';
 
 test.describe('Pet Scenarios', () => {
   test.describe.serial('e2e', () => {
-
     const { petSchema } = petResponse;
 
     test('POST - 200', async ({ request }) => {
@@ -18,7 +17,7 @@ test.describe('Pet Scenarios', () => {
 
       expect(response.status()).toBe(200);
 
-      expect(body.id).toBe(10)
+      expect(body.id).toBe(10);
       expect(body).toBeValidSchema(petSchema);
     });
 
@@ -32,7 +31,7 @@ test.describe('Pet Scenarios', () => {
 
       expect(response.status()).toBe(200);
 
-      expect(body.id).toBe(10)
+      expect(body.id).toBe(10);
       expect(body).toBeValidSchema(petSchema);
     });
 
@@ -44,7 +43,7 @@ test.describe('Pet Scenarios', () => {
 
       expect(response.status()).toBe(200);
 
-      expect(body.id).toBe(10)
+      expect(body.id).toBe(10);
       expect(body).toBeValidSchema(petSchema);
     });
 

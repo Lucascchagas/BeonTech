@@ -8,7 +8,6 @@
 
 This project is designed as an interview test that includes two challenges: automating API testing and UI testing using Playwright. The README covers the necessary steps to run the automation tests both locally and within a CI/CD pipeline (Azure DevOps).
 
-
 ### Built With
 
 The project leverages several frameworks and tools for efficient automation:
@@ -50,7 +49,7 @@ Here are the necessary steps to run the automation using Playwright on Windows.
 
 - **Install Playwright**
 
-  npm install playwright 
+  npm install playwright
   npx playwright install
 
 - **Install Joi and dotenv**

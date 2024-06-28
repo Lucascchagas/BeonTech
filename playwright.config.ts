@@ -11,14 +11,14 @@ expect.extend({
 
     if (error) {
       return {
-        message: () => `${error}`,  
-        pass: false,               
+        message: () => `${error}`,
+        pass: false,
       };
     }
 
     return {
       message: () => 'passed',
-      pass: true,                
+      pass: true,
     };
   },
 });
